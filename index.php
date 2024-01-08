@@ -24,23 +24,24 @@ class Beverage
     public string $price; // Change the type to string
     public string $temperature;
 
-    function __construct($temperature = "cold") {
-        $this->temperature = $temperature;
+    function __construct($color,$temperature = "cold", $price = "€2") {
+        $this->temperature = $temperature;        
+        $this->color = $color;
+        $this->price = $price;
     }
 
     public function getInfo($color, $temperature, $price)
     {
-        $this->color = $color;
-        $this->price = $price;
+        return "This beverage is $cola->temperature and $cola->color and costs $cola->price. <br>";
     }
 }
 
 $cola = new Beverage();
 
-$cola->getInfo("black", "cold", "€2");
+$cola->getInfo("black");
 
-echo "This beverage is $cola->temperature and $cola->color and costs $cola->price. <br>";
-echo $cola->temperature;
+
+echo $cola->getInfo();
 
 
 

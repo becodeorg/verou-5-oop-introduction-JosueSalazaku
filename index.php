@@ -21,7 +21,7 @@ USE TYPEHINTING EVERYWHERE!
 class Beverage
 {
     public string $color;
-    public float $price;
+    public string $price; // Change the type to string
     public string $temperature;
 
     function __construct($temperature = "cold") {
@@ -32,16 +32,15 @@ class Beverage
     {
         $this->color = $color;
         $this->price = $price;
-        
     }
 }
 
 $cola = new Beverage();
 
-$cola->getInfo("black", "cold","€2" );
+$cola->getInfo("black", "cold", "€2");
 
-echo "This beverage is $cola->temperature and $cola->color. <br>";
-echo "<br> Hello World";
+echo "This beverage is $cola->temperature and $cola->color and costs $cola->price. <br>";
+echo $cola->temperature;
 
 
 

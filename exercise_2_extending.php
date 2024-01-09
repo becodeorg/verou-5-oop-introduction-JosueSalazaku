@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-echo "Hello World";
+require 'exercise_1_classes.php';
+
+echo " <br> Hello World this the Beer class";
 
 /* EXERCISE 2
 
@@ -20,21 +22,24 @@ Make sure that each print is on a different line.
 Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercentage() in /var/www/becode/workshop/exercise2.php on line 64
 USE TYPEHINTING EVERYWHERE!
 */
-class Beer 
+class Beer extends Beverage
 {
      public string $name;
      public float $alcoholPercentage;
 
-     public function __construct($name, $alcoholPercentage) {
-        $this->name = $name;
-        $this->alcoholPercentage = $alcoholPercentage;
+     public function __construct($name, $color, $price, $alcoholPercentage)
+     {
+         parent::__construct($color, $price); 
+         $this->name = $name;
+         $this->alcoholPercentage = $alcoholPercentage;
      }
-
-     public function getAlcoholPercentage() {
-        return $this->alcoholPercentage;
+ 
+     public function getAlcoholPercentage()
+     {
+         return $this->alcoholPercentage;
      }
 }
 
-$Duvel = new Beer('blond', "8.5");
+$Duvel = new Beer('blond', '€3.5', 8.5);
 
 echo $Duvel;

@@ -24,22 +24,22 @@ USE TYPEHINTING EVERYWHERE!
 */
 class Beer extends Beverage
 {
-     public string $name;
-     public float $alcoholPercentage;
+    public string $name;
+    public float $alcoholPercentage;
 
-     public function __construct($name, $color, $price, $alcoholPercentage)
-     {
-         parent::__construct($color, $price); 
-         $this->name = $name;
-         $this->alcoholPercentage = $alcoholPercentage;
-     }
- 
-     public function getAlcoholPercentage()
-     {
-         return $this->alcoholPercentage;
-     }
+    public function __construct(string $name, string $color, string $price, float $alcoholPercentage)
+    {
+        parent::__construct($color, $price);
+        $this->name = $name;
+        $this->alcoholPercentage = $alcoholPercentage;
+    }
+
+    public function getAlcoholPercentage(): float
+    {
+        return $this->alcoholPercentage;
+    }
 }
+
 
 $Duvel = new Beer('blond', '€3.5', 8.5);
 
-echo $Duvel;

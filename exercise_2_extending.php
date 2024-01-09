@@ -20,7 +20,6 @@ Make sure that each print is on a different line.
 Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercentage() in /var/www/becode/workshop/exercise2.php on line 64
 USE TYPEHINTING EVERYWHERE!
 */
-
 class Beer 
 {
      public string $name;
@@ -31,7 +30,11 @@ class Beer
         $this->alcoholPercentage = $alcoholPercentage;
      }
 
-     public function alcoholPercentage() {
+     public function getAlcoholPercentage() {
         return $this->alcoholPercentage;
      }
 }
+
+$Duvel = new Beer('blond', "8.5");
+
+echo $Duvel;

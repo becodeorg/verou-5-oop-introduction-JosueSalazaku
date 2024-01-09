@@ -25,4 +25,9 @@ class Beer
 {
      public string $name;
      public float $alcoholPercentage;
+
+     public function __construct($name, $alcoholPercentage) 
+     {
+
+     }
 }

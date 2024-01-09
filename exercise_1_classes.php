@@ -44,5 +44,5 @@ $cola = new Beverage('black', 2.0);
 
 echo $cola->getInfo() . PHP_EOL;
 
-echo 'Temperature: ' . $cola->getTemperature() . PHP_EOL;
+echo ' <br>Temperature: ' . $cola->getTemperature() . PHP_EOL;
 

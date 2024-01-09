@@ -26,8 +26,12 @@ class Beer
      public string $name;
      public float $alcoholPercentage;
 
-     public function __construct($name, $alcoholPercentage) 
-     {
+     public function __construct($name, $alcoholPercentage) {
+        $this->name = $name;
+        $this->alcoholPercentage = $alcoholPercentage;
+     }
 
+     public function alcoholPercentage() {
+        return $this->alcoholPercentage;
      }
 }
